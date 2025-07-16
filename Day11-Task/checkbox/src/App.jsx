@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -37,7 +38,9 @@ const App = () => {
   };
 
   return (
-    <div className="app-container">
+    <div className="app">
+      <Navbar />
+      <div className="app-container">
       <div className="form-box">
         <h2 className="form-title">{isLogin ? "Login" : "Signup"}</h2>
         <form onSubmit={handleSubmit} className="form-content">
@@ -105,6 +108,7 @@ const App = () => {
             {isLogin ? "Signup" : "Login"}
           </button>
         </p>
+      </div>
       </div>
     </div>
   );

@@ -6,12 +6,20 @@ body {
   padding: 0;
 }
 
+/* App layout */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 /* Center the form */
 .app-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex: 1;
+  padding: 20px;
 }
 
 /* Form box */
