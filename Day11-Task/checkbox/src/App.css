@@ -1,0 +1,115 @@
+/* Global Reset */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Center the form */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Form box */
+.form-box {
+  background-color: #ffffff;
+  color: #333;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+/* Form title */
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+}
+
+/* Form fields layout */
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Input fields */
+.form-input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.form-input:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+/* Role checkboxes */
+.checkbox-group {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+/* Make admin and user labels colorful */
+.admin-label {
+  color: crimson;
+}
+
+.user-label {
+  color: green;
+}
+
+/* Submit button */
+.form-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #45a049;
+}
+
+/* Toggle login/signup text */
+.switch-text {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.switch-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 4px;
+}
+
+.switch-button:hover {
+  color: #0056b3;
+}
