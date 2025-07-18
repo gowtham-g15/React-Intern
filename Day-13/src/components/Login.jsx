@@ -10,6 +10,11 @@ const Login = () => {
 
   async function handleLogin(event) {
     event.preventDefault();
+    if (!name || !password) {
+      alert('Please fill in all fields');
+      return;
+    }
+
     try {
       const response = await axios.post(
         "https://springboot-intern-rjt3.onrender.com/api/auth/login",
@@ -24,10 +29,15 @@ const Login = () => {
         localStorage.setItem("token", token);
         localStorage.setItem("role", roles);
         localStorage.setItem("userName", userName);
-        alert("Login Successful");
-        navigate("/"); 
+        
+        // Redirect based on role
+        if (roles === 'ROLE_ADMIN') {
+          navigate("/employee");
+        } else {
+          navigate("/add");
+        }
       } else {
-        alert("Invalid token received");
+        throw new Error("No token received");
       }
 
     } catch (e) {
